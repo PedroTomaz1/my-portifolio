@@ -20,7 +20,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
-  animation: blurring 0.5s normal forwards ease-in-out;
+  animation: blurring 0.75s normal forwards ease-in-out;
 }
 
 /* Position text in the middle of the page/image */
@@ -51,12 +51,12 @@ html {
 
 @keyframes blurring {
   from {
-    filter: blur(0) brightness(100%);
-    -webkit-filter: blur(0) brightness(100%);
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
   }
   to {
-    filter: blur(2px) brightness(50%);
-    -webkit-filter: blur(2px) brightness(50%);
+    filter: brightness(25%);
+    -webkit-filter: brightness(25%);
   }
 }
 
