@@ -1,3 +1,71 @@
-body {
-    background-color: gray;
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.main::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: url("../img/wallpaper_home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: blurring 0.5s normal forwards ease-in-out;
+}
+
+/* Position text in the middle of the page/image */
+.main-title {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.title-text {
+  font-size: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  animation: typing 2s steps(11, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blurring {
+  from {
+    filter: blur(0) brightness(100%);
+    -webkit-filter: blur(0) brightness(100%);
+  }
+  to {
+    filter: blur(2px) brightness(50%);
+    -webkit-filter: blur(2px) brightness(50%);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
