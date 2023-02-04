@@ -4,6 +4,10 @@ html {
   margin: 0;
 }
 
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
 .main::before {
   content: " ";
   position: absolute;
@@ -32,13 +36,17 @@ html {
 }
 
 .title-text {
+  font-family: 'Playfair Display', sans-serif;
   font-size: 50px;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
+  /* letter-spacing: 0.25rem; */
   animation: typing 2s steps(11, end), blink-caret 0.75s step-end infinite;
+}
+
+.subtitle-text {
+    font-size: 20px;
 }
 
 @keyframes blurring {
